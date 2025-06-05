@@ -1,0 +1,24 @@
+# robots.txt for Health Bakery Website
+# This file controls search engine crawlers' access to the website
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /my-account/
+
+# Disallow specific file types
+Disallow: /*.json$
+# Removed XML disallow rule to ensure sitemap.xml is accessible
+Disallow: /*.txt$
+
+# Allow crawlers to access images and CSS
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.css$
+
+# Website sitemap - using dynamic sitemap API with correct host parameter
+Sitemap: http://health-bakery-web-lazzicat.s3-website-ap-northeast-1.amazonaws.com/sitemap.xml
